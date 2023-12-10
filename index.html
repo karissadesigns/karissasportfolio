@@ -21,16 +21,23 @@
       <a href="contact.html" class="w3-bar-item w3-button">Contact Me</a>
     </nav>
   </header>
-  <div class="w3-container W3-center">
+   
+  <!-- About Me -->
+<about >
+
+  
+</about>
+
+  
+  <div class="w3-container w3-center portfolio">
     <h2>Portfolio</h2>
   </div>
 
-  <!---4th section of Img-->
+  <!-- 4th section of Img -->
   <section class="w3-row-padding">
-
     <article class="w3-col s12 m6 l6">
       <p><img src="assets/Branding_Cover_72ppi.jpg" alt="uprooted" /></p>
-       <h3>Uprooted Visual Identity</h3>
+      <h3>Uprooted Visual Identity</h3>
     </article>
     <article class="w3-col s12 m6 l6">
       <p><img src="assets/ClayMagazine_off_webD_72ppi.jpg" /></p>
@@ -44,16 +51,62 @@
       <p><img src="assets/AFitnity_%20poster_72ppi.jpg" /></p>
       <h3>Apocalyptic Poster</h3>
     </article>
-    </article>
-<div></div>    
   </section>
-  <!---4th section of Img-->
+  <!-- 4th section of Img -->
 
-  <!--About me your-->
+  <!-- Contact Me Section -->
+  <section class="w3-container w3-center">
+    <h2>Contact Me</h2>
+    <!-- Add your contact form or information here -->
+  </section>
+
+ 
+  <div class="fcf-body">
+
+      <div id="fcf-form">
+      <h3 class="fcf-h3">Contact us</h3>
+
+      <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+
+          <div class="fcf-form-group">
+              <label for="Name" class="fcf-label">Your name</label>
+              <div class="fcf-input-group">
+                  <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+              </div>
+          </div>
+
+          <div class="fcf-form-group">
+              <label for="Email" class="fcf-label">Your email address</label>
+              <div class="fcf-input-group">
+                  <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+              </div>
+          </div>
+
+          <div class="fcf-form-group">
+              <label for="Message" class="fcf-label">Your message</label>
+              <div class="fcf-input-group">
+                  <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+              </div>
+          </div>
+
+          <div class="fcf-form-group">
+              <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+          </div>
+
+          <div class="fcf-credit" id="fcf-credit">
+          Simple HTML email form provided by <a href="https://www.majesticform.com" target="_blank">MajesticForm</a>
+          </div>
+
+      </form>
+      </div>
+
+  </div>
+
+
+
   <footer>
-    
     <p>&copy; Copyright 2020</p>
-    </footer>
+  </footer>
 </body>
 
 </html>
