@@ -80,8 +80,11 @@
       }
   
         /* contact styles */
-  
-      #fcf-form {
+      
+      label, h3{
+        color:#540000;
+      }  
+        #fcf-form {
           display:block;
       }
       
@@ -241,3 +244,4 @@
         input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[type="button"].fcf-btn-block {
             width: 100%;
         }
+        /* contact styles */
