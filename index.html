@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="my-styles.css">
-  <link rel="assets" href="assets/">
   <link rel="stylesheet" href="https://use.typekit.net/cvr2ogq.css">
 </head>
 
@@ -15,13 +14,13 @@
   <!-- header/ navigation bar -->
   <header class="w3-container w3-center w3-round-xxlarge ">
     <img src="#logo" alt="logo" style="width:100%">
-    <h1 class="w3-text-xxlarge emani"><a href="index.html">Emani</a></h1>
+    <h1 class="w3-text-xxlarge emani" id="pageheading"><a href="index.html">Emani</a></h1>
   
     <nav class="w3-bar w3-center">
       <a href="gallery.html" class="w3-bar-item w3-button w3-round-xxlarge gallery">Gallery</a>
       <a href="portfolio.html" class="w3-bar-item w3-button w3-round-xxlarge portfolio">Portfolio</a>
       <a href="about.html" class="w3-bar-item w3-button w3-round-xxlarge about">About Emani</a>
-      <a href="contact.html" class="w3-bar-item w3-button w3-round-xxlarge contact">Contact Me</a>
+      <a href="#contactpg" class="w3-bar-item w3-button w3-round-xxlarge contact">Contact Me</a>
     </nav>
   </header>
    <!-- header/ navigation bar ends here  -->
@@ -31,15 +30,17 @@
 
   <!--  Img Gallery/  can the make the bar bigger so it fits in the boarder   -->
 <gallery>
-  <div class="w3-row-padding w3-round-large w3-padding-32 w3-center photos">
-    <div class="w3-half">
-      <img src="assets/Branding_Cover_72ppi.jpg" alt="Branding" class="w3-round-xlarge" style="width:100%">
+  <div class="w3-section w3-row-padding w3-round-large w3-padding w3-center w3-margin photos">
+   <!-- <div class="w3-col s1 w3-block"><p>o</p></div> -->
+    <div class="w3-col s12 m6 w3-right w3-right">
+      <img src="assets/Branding_Cover_72ppi.jpg" alt="Branding" class="w3-section w3-round-xlarge" style="width:100%">
       <img src="assets/Teacans_72ppi_newrez.jpg" alt="Teacans" class="w3-round-xlarge" style="width:100%">
     </div>
-    <div class="w3-half">
-      <img src="assets/ClayMagazine_off_webD_72ppi.jpg" alt="Clay Magazine"class="w3-round-xlarge" style="width:100%">
+    <div class="w3-col s12 m6 w3 w3-left">
+      <img src="assets/ClayMagazine_off_webD_72ppi.jpg" alt="Clay Magazine"class="w3-section w3-round-xlarge" style="width:100%">
       <img src="assets/AFitnity_%20poster_72ppi.jpg" alt="Apocolyptic Poster"class="w3-round-xlarge" style="width:100%">
     </div>
+    <!-- <div class="w3-col s1 w3-block"><p>o</p></div> -->
   </div>
 </gallery> 
    <!--  Img Gallery ends  -->
@@ -55,52 +56,44 @@
   <!-- the spave between the gallery & the contact is toooooooo close FIX THAT  -->
   
   <!-- Contact Me Section -->
-  <div class="w3-container w3-center contact">
-  <section class="w3-container w3-center">
+  <div id="contactpg" class="w3-container w3-center contact">
+    <section class="w3-container w3-center w3-margin">  
+      <div class="fcf-body w3-round-xxlarge">
+        <div id="fcf-form ">
+          <h3 class="fcf-h3">Lets Stay in Touch</h3>
+          <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+            <div class="fcf-form-group">
+                <label for="Name" class="fcf-label">Your name</label>
+                <div class="fcf-input-group">
+                    <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                </div>
+            </div>
 
-    <!-- Add your contact form or information here -->
-  </section>
+            <div class="fcf-form-group">
+                <label for="Email" class="fcf-label">Your email address</label>
+                <div class="fcf-input-group">
+                    <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                </div>
+            </div>
 
- 
-  <div class="fcf-body">
+            <div class="fcf-form-group">
+                <label for="Message" class="fcf-label">Your message</label>
+                <div class="fcf-input-group">
+                    <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+                </div>
+            </div>
 
-      <div id="fcf-form ">
-      <h3 class="fcf-h3">Lets Stay in Touch</h3>
+            <div class="fcf-form-group">
+                <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+            </div>
 
-      <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
-
-          <div class="fcf-form-group">
-              <label for="Name" class="fcf-label">Your name</label>
-              <div class="fcf-input-group">
-                  <input type="text" id="Name" name="Name" class="fcf-form-control" required>
-              </div>
-          </div>
-
-          <div class="fcf-form-group">
-              <label for="Email" class="fcf-label">Your email address</label>
-              <div class="fcf-input-group">
-                  <input type="email" id="Email" name="Email" class="fcf-form-control" required>
-              </div>
-          </div>
-
-          <div class="fcf-form-group">
-              <label for="Message" class="fcf-label">Your message</label>
-              <div class="fcf-input-group">
-                  <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
-              </div>
-          </div>
-
-          <div class="fcf-form-group">
-              <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
-          </div>
-
-          <div class="fcf-credit" id="fcf-credit">
-          Simple HTML email form provided by <a href="https://www.majesticform.com" target="_blank">MajesticForm</a>
-          </div>
-
-      </form>
+            <div class="fcf-credit" id="fcf-credit">
+            Simple HTML email form provided by <a href="https://www.majesticform.com" target="_blank">MajesticForm</a>
+            </div>
+          </form>
+        </div>
       </div>
-
+    </section>
   </div>
    <!-- Contact Me Section ends -->
     
