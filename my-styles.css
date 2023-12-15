@@ -17,7 +17,7 @@
         font-style: normal;
         color: #e581ff;
       }
-
+      
         article h3 {
         text-align: center;
         }
@@ -34,14 +34,14 @@
 		padding: 0.5em;
         color: #99cc66;}
       body{
-        background-color: #540000;
+        background-color: #100216;
         }
   
-        /* nagivation */
+      /* nagivation */
 
-        .gallery {
-          color: #c869f9;
-        }
+      .gallery {
+        color: #c869f9;
+      }
       .portfolio {
         color: #c869f9;
       }
@@ -50,39 +50,81 @@
       }
       .contact {
         color:#c869f9; 
-    }
-
-    h1.emani {
-      font-size:80px;
-      text-align: left;
-      text-decoration:none !important;
-    }
-
-    #pageheading {
-      text-decoration:none;
-    }  
-    a, a:link, a:visited, a:focus, a:hover, a:active{
-      color:#c869f9;
-      text-decoration:none;
-      cursor: pointer;
       }
-    .w3-bar-item:hover {
-      color:#540000 !important;
-      background-color:#9c6!important;
-      border-color: #c869f9 ;
-    }
-  
-      /* nagivation */
 
-        /* gallery styles */
-      .photos {
+      h1.emani {
+        font-size:80px;
+        text-align: left;
+        text-decoration:none !important;
+      }
+
+      #pageheading {
+        font-family: "co-headline", sans-serif;
+          font-weight: 700;
+          font-style: normal;
+        text-decoration:none;
+      }  
+      a, a:link, a:visited, a:focus, a:hover, a:active{
+        color:#c869f9;
+        text-decoration:none;
+        cursor: pointer;
+        }
+      .w3-bar-item:hover {
+        color:#100216 !important;
+        background-color:#9c6!important;
+        border-color: #c869f9 ;
+      }
+        /* end nagivation */
         
+        
+      /* gallery styles */
+      .photos { 
       }
-  
+      /*end gallery*/
+      
+      /* welcomepg */
+      #welcome{
+      background-color:#3a0000;
+      text-align-last: center;
+      }
+      /* end welcome */
+
+      
+      /*about */
+      #aboutpg{
+        background-color: #3a0000;
+      } 
+      .aboutme {
+        font-family: "co-text", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      #aboutemani{
+        font-family:"co-heading", san-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+      /* end about */
+ 
+      /* resume styles */
+      .Rezname{
+        font-family: "co-text", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      h6 {
+      text-decoration-color !important: #100216;
+      }
+      /*end resume styles */
+
+
+
         /* contact styles */
       
       label, h3{
-        color:#540000;
+        color:#9c6;
       }  
         #fcf-form {
           display:block;
@@ -96,10 +138,10 @@
           line-height: 1.5;
           color: #212529;
           text-align: left;
-          background-color: #9c6;
+          background-color: #100216;
           padding: 30px;
           padding-bottom: 10px;
-          border: 1px solid #c869f9;
+          border: 2px solid #c869f9;
           border-radius: 0.25rem;
           max-width: 100%;
       }
@@ -130,7 +172,7 @@
           color: #495057;
           background-color: #fff;
           background-clip: padding-box;
-          border: 1px solid #ced4da;
+          border: 1px solid #9c6;
           outline: none;
           border-radius: 0.25rem;
           transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
