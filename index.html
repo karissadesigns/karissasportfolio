@@ -8,6 +8,48 @@
   <link rel="stylesheet" href="my-styles.css">
   <link rel="stylesheet" href="https://use.typekit.net/cvr2ogq.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script>
+    // Open the Modal
+    function openModal() {
+      document.getElementById("myModal").style.display = "block";
+    }
+    
+    // Close the Modal
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
 </head>
 
 <body>
@@ -21,48 +63,6 @@
       <a href="#myresume" class="w3-bar-item w3-button w3-round-xxlarge gallery">Resume</a>
       <a href="#contactpg" class="w3-bar-item w3-button w3-round-xxlarge contact">Contact Me</a>
     </nav>
-    <script>
-      // Open the Modal
-      function openModal() {
-        document.getElementById("myModal").style.display = "block";
-      }
-      
-      // Close the Modal
-      function closeModal() {
-        document.getElementById("myModal").style.display = "none";
-      }
-      
-      var slideIndex = 1;
-      showSlides(slideIndex);
-      
-      // Next/previous controls
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
-      }
-      
-      // Thumbnail image controls
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
-      
-      function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("demo");
-        var captionText = document.getElementById("caption");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-        captionText.innerHTML = dots[slideIndex-1].alt;
-      }
-      </script>
   </header>
    <!-- header/ navigation bar ends here  -->
 
@@ -186,7 +186,7 @@
   <!-- end lightbox -->
 
   
-  <!-- the unforgettable RESUME -->
+  <!-- RESUME -->
   <br>
   <br>
   <br>
@@ -216,35 +216,47 @@
                             <p><i class="fa fa-cube fa-fw w3-margin-right w3-large w3-text-teal"></i>Designer</p>
                         -->
 
-                        <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Designer</p>
-                        <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Brooklyn, NY</p>
-                        <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>karissay717@mail.com</p>
-                        <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>845 536 0854</p>
+                        <p><i id="Designer"class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Designer</p>
+                        <p><i id="location"class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Brooklyn, NY</p>
+                        <p><i id="email" class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>karissay717@mail.com</p>
+                        <p><i id="number" class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>845 536 0854</p>
                         <hr>
 
-                        <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
-                        <p>Adobe Indesign</p>
-                        <div class="w3-light-grey w3-round-xlarge w3-small">
-                            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">90%</div>
-                        </div>
+                        <p class=" skills w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+                        <ul id="myskills"> 
+                          <li>Adobe Indesign</li>
+                          <li> Adobe Photoshop</li>
+                          <li>Adobe Illustrator</li>
+                          <li>Adobe Illustrator</li>
+                          <li> Figma</li>
+                        </ul> 
+                        <!-- <p>Adobe Indesign</p>
+                         <div class="w3-light-grey w3-round-xlarge w3-small">
+                           <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">90%</div>
+                        </div> 
                         <p>Adobe Photoshop</p>
                         <div class="w3-light-grey w3-round-xlarge w3-small">
                             <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
                                 <div class="w3-center w3-text-white">80%</div>
                             </div>
-                        </div>
+                        </div> 
                         <p>Adobe Illustrator</p>
                         <div class="w3-light-grey w3-round-xlarge w3-small">
                             <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
-                        </div>
+                        </div> 
                         <p>Figma</p>
                         <div class="w3-light-grey w3-round-xlarge w3-small">
                             <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
-                        </div>
+                        </div> -->
                         <br>
 
                         <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Interests</b></p>
-                        <p>Photography</p>
+                        <ul id="myinterests">
+                          <li>Photography</li>
+                          <li> Gardening</li>
+                          <li>Creative Writing</li>  
+                        </ul> 
+                        <!-- <p>Photography</p>
                         <div class="w3-light-grey w3-round-xlarge">
                             <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
                         </div>
@@ -255,7 +267,7 @@
                         <p>Creative Writing</p>
                         <div class="w3-light-grey w3-round-xlarge">
                             <div class="w3-round-xlarge w3-teal" style="height:24px;width:25%"></div>
-                          </div>
+                          </div> -->
                         <br>
                     </div>
                 </div>
@@ -268,17 +280,17 @@
             <div class="w3-twothird">
             <!-- Work Experience -->
             <div class="w3-container w3-white w3-margin-bottom w3-round">
-                <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+                <h2 id="work" class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
                 <div class="w3-container">
-                <h5 class="w3-opacity"><b>Design Intern/ Maha Mamish</b></h5>
-                <h6 id="noteal"class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2023 - July 2023</h6> 
-                <p>Collaborated with Maha throughout the redesign of her brand</p>
+                <h5 id="intern" class="w3-opacity"><b>Design Intern/ Maha Mamish</b></h5>
+                <h6 id="date"class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2023 - July 2023</h6> 
+                <p id="internEX">Collaborated with Maha throughout the redesign of her brand</p>
                 <hr>
                 </div>
                 <div class="w3-container">
-                <h5 class="w3-opacity"><b>Merchandiser / Plant Partner</b></h5>
-                <h6 id="noteal"class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>April 2022 - Jun 2022</h6>
-                <ul>
+                <h5 id="merch" class="w3-opacity"><b>Merchandiser / Plant Partner</b></h5>
+                <h6 id="date"class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>April 2022 - Jun 2022</h6>
+                <ul id="merchEx">
                   <li>Merchandise plants in store and in the garden in an aesthetically pleasing manner to increase chances of customer purchase </li>
                   <li>Merchandise plants effectively by continuously collaborating with the team </li>
                   <li>Created a welcoming environment to create a positive shopping experience </li>
@@ -288,9 +300,9 @@
                 <hr>
                 </div>
                 <div class="w3-container">
-                <h5 class="w3-opacity"><b>Retail Sales Associate / Burlington</b></h5>
-                <h6 id="noteal"class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2021 - Aug 2021</h6>
-                <ul>
+                <h5 id="retail" class="w3-opacity"><b>Retail Sales Associate / Burlington</b></h5>
+                <h6 id="date"class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2021 - Aug 2021</h6>
+                <ul id="retailEx">
                   <li>Interacted with multiple customers, assessing their needs and answering questions to ensure a pleasurable shopping experience</li>
                   <li>Organized inventory accurately and efficiently</li>
                   <li>Assisting in floor moves, merchandising, display maintenance</li>
@@ -299,9 +311,9 @@
                 <hr>
                 </div>
                 <div class="w3-container">
-                <h5 class="w3-opacity"><b>Program / Techie Youth</b></h5>
-                <h6 class="w3-text-"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2021 - Mar 2021</h6>
-                <p>Engaged in multiple resources and content on business and money. </p><br>
+                <h5 id="techY" class="w3-opacity"><b>Program / Techie Youth</b></h5>
+                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2021 - Mar 2021</h6>
+                <p id="techYEX" >Engaged in multiple resources and content on business and money. </p><br>
               </div>
               
             </div>
@@ -310,15 +322,15 @@
             <div class="w3-container w3-white w3-round">
                 <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
                 <div class="w3-container">
-                <h5 class="w3-opacity"><b>New York City College of Technology</b></h5>
-                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Forever</h6>
-                <p>Bachelor of Fine Arts (BFA), Communication Design (in progress)</p>
+                <h5 id="cityteh" class="w3-opacity"><b>New York City College of Technology</b></h5>
+                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right "></i>2025 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
+                <p id="ctdegree">Bachelor of Fine Arts (BFA), Communication Design (in progress)</p>
                 <hr>
                 </div>
                 <div class="w3-container">
-                <h5 class="w3-opacity"><b>Kingsborough Community College</b></h5>
-                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2021 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
-                <p>Associate of Science in Graphic Design and  Illustration</p>
+                <h5 id="kings" class="w3-opacity"><b>Kingsborough Community College</b></h5>
+                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2021 - <span class="w3-tag w3-teal w3-round">Graduated</span></h6>
+                <p id="kingsdegree">Associate of Science in Graphic Design and  Illustration</p>
                 <hr>
                 </div>
             </div>

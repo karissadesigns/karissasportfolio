@@ -3,7 +3,7 @@
         font-family: "co-text", sans-serif;
         font-weight: 400;
         font-style: normal;
-        color: #e581ff;
+        /* color: #e581ff; */
         box-sizing: border-box;
       }
         
@@ -38,7 +38,7 @@
         }
   
       /* nagivation */
-
+    
       .gallery {
         color: #e581ff;
       }
@@ -56,6 +56,7 @@
         font-size:80px;
         text-align: left;
         text-decoration:none !important;
+        
       }
 
       #pageheading {
@@ -68,6 +69,9 @@
         color:#e581ff;
         text-decoration:none;
         cursor: pointer;
+        font-family: "co-headline", sans-serif;
+        font-weight: 400;
+        font-style: normal;
         }
       .w3-bar-item:hover {
         color:#100216 !important;
@@ -98,26 +102,40 @@
         font-family: "co-text", sans-serif;
         font-weight: 400;
         font-style: normal;
+        color:#e581ff;
       }
 
       #aboutemani{
         font-family:"co-heading", san-serif;
         font-weight: 700;
         font-style: normal;
+        color:#e581ff;
       }
       /* end about */
  
+
       /* resume styles */
       .Rezname{
-        font-family: "co-text", sans-serif;
-        font-weight: 400;
+        font-family: "co-headline", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 35px;
+        color: #100216;
+      }
+      .skills{
+        font-family: "co-headline", sans-serif;
+        font-weight: 700;
         font-style: normal;
       }
 
-      h6 {
-      text-decoration-color:#100216 !important;
+      #Designer, #location, #email, #number, #myskills {
+        color:#100216;
+      }
+      #myinterests{
+        color:#100216;
       }
       /*end resume styles */
+
 
       /* lightbox  */
       .row > .column {
@@ -296,9 +314,9 @@
           font-weight: 400;
           line-height: 1.5;
           color: #495057;
-          background-color: #fff;
+          background-color: #d8d8d8;
           background-clip: padding-box;
-          border: 1px solid #9c6 !important;
+          border: 1px solid #fff;
           outline: none;
           border-radius: 0.25rem;
           transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -375,15 +393,15 @@
         }
         
         .fcf-btn-primary {
-            color: #fff;
-            background-color: #007bff;
-            border-color: #007bff;
+            color: #100216;
+            background-color: #99cc66;
+            border-color: #e581ff;
         }
         
         .fcf-btn-primary:hover {
-            color: #fff;
-            background-color: #0069d9;
-            border-color: #0062cc;
+            color: #100216;
+            background-color: #e581ff;
+            border-color: #9c6;
         }
   
         .fcf-btn-primary:focus, .fcf-btn-primary.focus {
