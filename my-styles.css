@@ -41,15 +41,19 @@
     
       .gallery {
         color: #e581ff;
+        font-size: 20px; 
       }
       .portfolio {
         color: #e581ff;
+        font-size: 20px; 
       }
       .about{
         color: #e581ff;
+        font-size: 20px; 
       }
       .contact {
-        color:#e581ff; 
+        color:#e581ff;
+        font-size: 20px; 
       }
 
       h1.emani {
@@ -133,6 +137,20 @@
       }
       #myinterests{
         color:#100216;
+      }
+
+      #work{
+        font-family: "co-headline", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      #ed {
+        font-family: "co-headline", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .w3-text-teal {
+        color:#440000;
       }
       /*end resume styles */
 
