@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Emani Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="css/my-styles.css">
+  <link rel="stylesheet" href="https://use.typekit.net/cvr2ogq.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script>
+    // Open the Modal
+    function openModal() {
+      document.getElementById("myModal").style.display = "block";
+    }
+    
+    // Close the Modal
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+</head>
+
+<body>
+
+  <!-- header/ navigation bar -->
+  <header class="w3-container w3-l w3-margin-right w3-center">
+    <h1 class="w3-text-xxlarge w3-center emani" id="pageheading" href="index.html">Emani</a></h1>
+    <nav class="w3-bar w3-center w3-text-">
+      <a href="portfolio.html" class="w3-bar-item w3-button w3-round-xxlarge portfolio">Portfolio</a>
+      <a href="#aboutpg" class="w3-bar-item w3-button w3-round-xxlarge about">About Emani</a>
+      <a href="#myresume" class="w3-bar-item w3-button w3-round-xxlarge gallery">Resume</a>
+      <a href="#contactpg" class="w3-bar-item w3-button w3-round-xxlarge contact">Contact Me</a>
+    </nav>
+  </header>
+   <!-- header/ navigation bar ends here  -->
+
+   <!-- Welcome My visters/  make this super big in styles -->
+<!-- <welcome> 
+  <div class="w3-container w3-margin ">
+    <h1 class="w3-panel w3-round-xxlarge w3-margin w3-padding-24 " id="welcome">Welcome to my Designer-uary You are Invited to Explore My Passions for Graphic design Typography n Publication design & The way I View The World!</h1> 
+  </div>  
+</welcome> -->
+
+
+   <!-- Welcome Ends Here  -->
+  
+  <!-- <div class="w3-container w3-center portfolio">
+  </div> -->
+
+  <!--  Img Gallery/  can the make the bar bigger so it fits in the boarder   -->
+<gallery id="art">
+  <div class="w3-section w3-row-padding w3-round-large w3-padding w3-center w3-margin photos">
+   <!-- <div class="w3-col s1 w3-block"><p>o</p></div> -->
+    <div class="w3-col s12 m6 w3-right w3-right">
+      <img src="assets/Branding_Cover_72ppi.jpg" alt="Branding" class="w3-section w3-round" style="width:100%">
+      <img src="assets/Teacans_72ppi_newrez.jpg" alt="Teacans" class="w3-round" style="width:100%">
+    </div>
+    <div class="w3-col s12 m6 w3 w3-left">
+      <img src="assets/ClayMagazine_off_webD_72ppi.jpg" alt="Clay Magazine"class="w3-section w3-round" style="width:100%">
+      <img src="assets/AFitnity_%20poster_72ppi.jpg" alt="Apocolyptic Poster"class="w3-round" style="width:100%">
+    </div>
+    <!-- <div class="w3-col s1 w3-block"><p>o</p></div> -->
+  </div>
+</gallery>
+<br>
+<br> 
+   <!--  Img Gallery ends  -->
+
+  <!-- About Me -->
+<about>
+  <div id="aboutpg"class=" w3-container w3-padding-48">
+    <h1 id="aboutemani"class="w3-margin"><b>About Emani</b></h1>
+    <h2 class="aboutme w3-round-xxlarge w3-margin">My real name is Karissa Young, I will start going by Emani as a designer from now on because it would be cool and my name has too many syllables its not memorable. Ive always been an artist, that weird kid who drew well and watched anime underneath the tables & my interests turned into a passion for graphic design. Now pursuing the career of my dreams. It's exciting to explore the possibility of design out there & I hope you are just as excited as I am to start a new project and find new ways.</h2>
+  </div>  
+</about>
+<br>
+<br>
+<br>
+
+  <!-- about me ends here  -->
+  <!-- lightbox  -->
+  <!-- <div class="row">
+    <div class="column">
+      <img src="assets/Branding_Cover_72ppi.jpg" class="w3-section w3-round" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow">
+    </div> -->
+    <!-- <div class="column">
+      <img src="assets/Teacans_72ppi_newrez.jpg"class="w3-section w3-round" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="assets/ClayMagazine_off_webD_72ppi.jpg" class="w3-section w3-round" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="assets/AFitnity_%20poster_72ppi.jpg" class="w3-section w3-round" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow">
+    </div> -->
+  <!-- </div> -->
+  
+  <!-- The Modal/Lightbox -->
+  <!-- <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+  
+      <div class="mySlides">
+        <div class="numbertext">1 / 14</div>
+        <img src="assets/Branding_Cover_300ppi.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">2 / 14</div>
+        <img src="assets/Teacans_72ppi_newrez.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">3 / 14</div>
+        <img src="assets/ClayMagazine_off_webD_72ppi.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">4 / 14</div>
+        <img src="assets/AFitnity_%20poster_72ppi.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext"> 5/ 14</div>
+        <img src="assets/Branding_Cover_72ppi.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">6 / 14</div>
+        <img src="assets/Teacans_72ppi_newrez.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">7 / 14</div>
+        <img src="assets/ClayMagazine_off_webD_72ppi.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">8 / 14</div>
+        <img src="assets/AFitnity_%20poster_72ppi.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">9 / 14</div>
+        <img src="assets/Branding_Cover_72ppi.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">10 / 14</div>
+        <img src="assets/Teacans_72ppi_newrez.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">11 / 14</div>
+        <img src="assets/ClayMagazine_off_webD_72ppi.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">12 / 14</div>
+        <img src="assets/AFitnity_%20poster_72ppi.jpg" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <div class="numbertext">13 / 14</div>
+        <img src="assets/Branding_Cover_72ppi.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">14 / 14</div>
+        <img src="assets/Teacans_72ppi_newrez.jpg" style="width:100%">
+      </div>
+  
+      
+      <!- Next/previous controls -->
+      <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+   -->
+      <!-- Caption text -->
+      <!-- <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+   -->
+      <!-- Thumbnail image controls -->
+      <!-- <div class="column">
+        <img class="demo" src="assets/Branding_Cover_thumbnail_72ppi.jpg" onclick="currentSlide(1)" alt="Uprooted is New York City’s first mobile florist and event design studio! Make buying high-quality flowers easier and faster for New Yorkers. Uprooted is still in the beginning stages of their brand and need a full identity that represents them as a whole. In order to do so they needed to allow themselves to stand out in the busy city, separating themselves from your traditional flower.">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="assets/Teacans_thumbnails_72ppi.jpg" onclick="currentSlide(2)" alt="Caned tea package design for a new tea company called Young. Young Real Brewed Tea is a company with the mission to make our customers feel young and cool as they drink our iced tea. The vision for the company is to showcase the most trendy aesthetics at the time to the Gen Z audience. 
+        This package design features the trend of wearing sunglasses to level up your style. The colors are meant to be bold and eye-catching and correspond with the flavors of the tea. Making Young brewed Tea ideal for our target audience.
+        ">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="assets/ClayMagazine_off_webD_thumbnail_72ppi.jpg" onclick="currentSlide(3)" alt="Clay Magazine is a monthly about pottery and ceramics. This magazine is beginner-friendly for young artists to be interested and motivated to take the next steps in their clay journeys, as well as those who are invested in the activity.  This magazine features ceramic artists with unique styles, the therapeutic benefits of starting pottery and ceramics, and the importance of functionality and form. Each department provides tips and techniques on how to add to your pottery creations.">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="assets/AFitnity_ poster_thumbnail_72ppi.jpg" onclick="currentSlide(4)" alt="This is a personal project where I played with type and effects tools in the affinity designer to create an apocalyptic poster. 
+        When I created the poster after I made the shade effect. It was in the beginning stages of my learning to use Affinity Designer and I created a cool glow effect. Months later I came back to the design and envisioned an apocalyptic poster with the effect in the background. I wanted to have a type scattered around the poster to show the abandonedness of an apocalypse. The illustration acts as graffiti you might see on walls.
+        ">
+      </div>
+    </div>
+    <br>
+    <br>
+  </div> --> 
+  <!-- end lightbox -->
+
+  
+  <!-- RESUME -->
+  <br>
+  <br>
+  <br>
+  <div id="myresume"class="w3-content w3-margin-top w3-round" style="max-width:1400px;">
+
+    <!-- The Grid -->
+        <div class="w3-row-padding">
+        
+            <!-- Left Column -->
+            <div class="w3-third ">
+            
+                <div class="w3-white w3-text-grey w3-round ">
+                    <div class="w3-display-container-round">
+                        <img class="w3-display-container" src="assets/Portfolio.jpg" style="width:100%" alt="Rep.ofMe">
+                        <h2 class="Rezname w3-center w3-opacity">Karissa Young</h2>
+                        <div class="w3-display-bottomleft w3-container">
+                        </div>
+                    </div>
+                    <div class="w3-container">
+
+                        <!--HOW TO USE FONT AWESOME ICONS
+                            This template uses these font awesome icons. to use a font awesome icon, 
+                            1. go to this site and find an icon you like: https://fontawesome.com/icons 
+                            2. Grab the name of the icon. Let's say you choose "cube." Then, go down to one of the places below that has 
+                            classes of "fa" and "fa-[something]." You are going to replace the word "something" with "cube."
+                            3. That's it! the line of code should read something like: 
+                            <p><i class="fa fa-cube fa-fw w3-margin-right w3-large w3-text-teal"></i>Designer</p>
+                        -->
+
+                        <p><i id="Designer"class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Designer</p>
+                        <p><i id="location"class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Brooklyn, NY</p>
+                        <p><i id="email" class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>karissay717@mail.com</p>
+                        <p><i id="number" class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>845 536 0854</p>
+                        <hr>
+
+                        <p class=" skills w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+                        <ul id="myskills"> 
+                          <li>Adobe Indesign</li>
+                          <li> Adobe Photoshop</li>
+                          <li>Adobe Illustrator</li>
+                          <li> Figma</li>
+                        </ul> 
+                        <!-- <p>Adobe Indesign</p>
+                         <div class="w3-light-grey w3-round-xlarge w3-small">
+                           <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">90%</div>
+                        </div> 
+                        <p>Adobe Photoshop</p>
+                        <div class="w3-light-grey w3-round-xlarge w3-small">
+                            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
+                                <div class="w3-center w3-text-white">80%</div>
+                            </div>
+                        </div> 
+                        <p>Adobe Illustrator</p>
+                        <div class="w3-light-grey w3-round-xlarge w3-small">
+                            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
+                        </div> 
+                        <p>Figma</p>
+                        <div class="w3-light-grey w3-round-xlarge w3-small">
+                            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
+                        </div> -->
+                        <br>
+
+                        <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Interests</b></p>
+                        <ul id="myinterests">
+                          <li>Photography</li>
+                          <li> Gardening</li>
+                          <li>Creative Writing</li>  
+                        </ul> 
+                        <!-- <p>Photography</p>
+                        <div class="w3-light-grey w3-round-xlarge">
+                            <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
+                        </div>
+                        <p>Gardening</p>
+                        <div class="w3-light-grey w3-round-xlarge">
+                            <div class="w3-round-xlarge w3-teal" style="height:24px;width:55%"></div>
+                        </div>
+                        <p>Creative Writing</p>
+                        <div class="w3-light-grey w3-round-xlarge">
+                            <div class="w3-round-xlarge w3-teal" style="height:24px;width:25%"></div>
+                          </div> -->
+                        <br>
+                    </div>
+                </div>
+                <br>
+
+            <!-- End Left Column -->
+            </div>
+
+            <!-- Right Column -->
+            <div class="w3-twothird">
+            <!-- Work Experience -->
+            <div class="w3-container w3-white w3-margin-bottom w3-round">
+                <h2 id="work" class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+                <div class="w3-container">
+                <h5 id="intern" class="w3-opacity"><b>Design Intern/ Maha Mamish</b></h5>
+                <h6 id="date"class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2023 - July 2023</h6> 
+                <p id="internEX">Collaborated with Maha throughout the redesign of her brand</p>
+                <hr>
+                </div>
+                <div class="w3-container">
+                <h5 id="merch" class="w3-opacity"><b>Merchandiser / Plant Partner</b></h5>
+                <h6 id="date"class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>April 2022 - Jun 2022</h6>
+                <ul id="merchEx">
+                  <li>Merchandise plants in store and in the garden in an aesthetically pleasing manner to increase chances of customer purchase </li>
+                  <li>Merchandise plants effectively by continuously collaborating with the team </li>
+                  <li>Created a welcoming environment to create a positive shopping experience </li>
+                </ul> 
+                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p> -->
+
+                <hr>
+                </div>
+                <div class="w3-container">
+                <h5 id="retail" class="w3-opacity"><b>Retail Sales Associate / Burlington</b></h5>
+                <h6 id="date"class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2021 - Aug 2021</h6>
+                <ul id="retailEx">
+                  <li>Interacted with multiple customers, assessing their needs and answering questions to ensure a pleasurable shopping experience</li>
+                  <li>Organized inventory accurately and efficiently</li>
+                  <li>Assisting in floor moves, merchandising, display maintenance</li>
+                </ul> 
+                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p> -->
+                <hr>
+                </div>
+                <div class="w3-container">
+                <h5 id="techY" class="w3-opacity"><b>Program / Techie Youth</b></h5>
+                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2021 - Mar 2021</h6>
+                <p id="techYEX" >Engaged in multiple resources and content on business and money. </p><br>
+              </div>
+              
+            </div>
+            <!-- Work Experience Ends -->  
+            <!-- Education -->
+            <div class="w3-container w3-white w3-round">
+                <h2 id="ed"class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+                <div class="w3-container">
+                <h5 id="cityteh" class="w3-opacity"><b>New York City College of Technology</b></h5>
+                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right "></i>2025 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
+                <p id="ctdegree">Bachelor of Fine Arts (BFA), Communication Design (in progress)</p>
+                <hr>
+                </div>
+                <div class="w3-container">
+                <h5 id="kings" class="w3-opacity"><b>Kingsborough Community College</b></h5>
+                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2021 - <span class="w3-tag w3-teal w3-round">Graduated</span></h6>
+                <p id="kingsdegree">Associate of Science in Graphic Design and  Illustration</p>
+                <hr>
+                </div>
+            </div>
+            <!-- Education Ends -->
+            <!-- End Right Column -->
+            </div>
+            
+        <!-- End Grid -->
+        </div>
+    </div>
+  <!-- RESUME Ends Here -->
+<br>
+<br>
+  <!-- Contact Me Section -->
+  <div id="contactpg" class="w3-container w3-center contact">
+    <section class="w3-container w3-center w3-margin">  
+      <div class="fcf-body w3-round-xxlarge">
+        <div id="fcf-form ">
+          <h3 class="fcf-h3">Lets Stay in Touch</h3>
+          <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+            <div class="fcf-form-group">
+                <label for="Name" class="fcf-label">Your name</label>
+                <div class="fcf-input-group">
+                    <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                </div>
+            </div>
+
+            <div class="fcf-form-group">
+                <label for="Email" class="fcf-label">Your email address</label>
+                <div class="fcf-input-group">
+                    <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                </div>
+            </div>
+
+            <div class="fcf-form-group">
+                <label for="Message" class="fcf-label">Your message</label>
+                <div class="fcf-input-group">
+                    <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+                </div>
+            </div>
+
+            <div class="fcf-form-group">
+                <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+   <!-- Contact Me Section ends -->
+    
+<!-- footere starts  -->
+  <footer w3-panel >
+    <p class="w3-center">&copy; Copyright 2023</p>
+  </footer>
+    <!-- footer ends  -->
+</body>
+
+</html>
